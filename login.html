@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>登入系統</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link herf="static/bootstrap.min.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+		<div class="container">
+			<h1>登入</h1>
+			<br>
+			<form action="" method="post">
+				<input type="text" placeholder="使用者名稱" name="username" value="{{request.form.username }}">
+				<input type="password" placeholder="密碼" name="password" value="{{request.form.password}}">
+				<input class="btn btn-default" type="submit" value="Login">
+			</form>
+			{% if error %}
+				<p class="error"><strong>錯誤:</strong> {{error}}
+			{% endif %}
+		</div>
+	</body>
+</html>
+
